@@ -1,0 +1,172 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Meditation Style*/
+* {
+  box-sizing: border-box;
+}
+
+.meditation-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.meditation-displayTime {
+  width: 30vw;
+  height: 30vw;
+  color: #ccc;
+  border: 7px solid #ccc;
+  border-radius: 50%;
+  font-size: 5vw;
+  margin: 0 auto;
+  padding-top: 10vw;
+}
+
+.meditation-btn {
+  width: 25%;
+  padding: 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #61dafb;
+  font-size: 1.3em;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.meditation-btn:hover {
+  background-color: #ffffff;
+  color: #ccc;
+  border: 2px solid #61dafb;
+}
+
+.meditation-enterMinutes {
+  margin-bottom: 30px;
+  padding: 20px;
+  font-size: 1em;
+  width: 45%;
+  border: 2px solid #ccc;
+}
+
+/* meditation timer bubble*/
+
+.meditation-bubble-container {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  font-size: 5vw;
+  margin: 0 auto;
+  padding-top: 10vw;
+  position: relative;
+  animation-name: pulse;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  box-shadow: inset 0 0 0 7px #79a6e8;
+  z-index: -1;
+}
+
+.meditation-bubble-container:after {
+  content: "breathe in";
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  top: calc(50% - 10px);
+  font-size: 24px;
+  font-family: Helvetica;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+  animation-name: text;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.meditation-bubble-container:before {
+  content: "";
+  width: 16px;
+  height: 50%;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: calc(50% - 8px);
+  z-index: 999;
+  background-image: radial-gradient(
+    circle at top center,
+    #6080c8 0%,
+    #6080c8 8px,
+    transparent 8px,
+    transparent 100%
+  );
+  animation-timing-function: linear;
+  transform-origin: center bottom;
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.learnContainer {
+  margin: 0 15%;
+  text-align: left;
+}
